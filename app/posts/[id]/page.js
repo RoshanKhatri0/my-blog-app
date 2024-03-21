@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getAllPosts, getPostById } from '../../utils/api';
 import { notFound } from 'next/navigation';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const dynamicParams = true
 
@@ -22,7 +23,7 @@ async function getPosts(id){
 export default async function Posts({ params }) {
   const post = await getPosts(params.id);
   return (
-    <div>
+    <div className='container-fluid my-5'>
       <h1>{post.title}</h1>
       <p>{post.body}</p>
       <Link href="/">

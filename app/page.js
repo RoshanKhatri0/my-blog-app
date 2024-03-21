@@ -3,6 +3,10 @@ import Home from './posts/page'
 
 export default async function page() {
   return (
-    <Home/>
+    <>
+      
+      <Home/>
+    </>
+    
   )
 }
