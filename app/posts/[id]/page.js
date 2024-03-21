@@ -1,30 +1,26 @@
-'use client'
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { getPostById } from '../../utils/api';
+import { getAllPosts, getPostById } from '../../utils/api';
+import { notFound } from 'next/navigation';
 
-export default function Posts({ params }) {
-  const id = params.id;
-  const [post, setPost] = useState(null);
+export const dynamicParams = true
 
-  useEffect(() => {
-    if (id) {
-      const fetchPost = async () => {
-        try {
-          const postData = await getPostById(id);
-          setPost(postData);
-        } catch (error) {
-          console.error("Error fetching post:", error); 
-        }
-      };
-      fetchPost();
-    }
-  }, [id]);
+export async function generateStaticParams(){
+  const posts = await getAllPosts()
+  return posts.map((post)=>({
+    id: String(post.id)
+  }))
+}
 
-  if (!post) {
-    return <div>No Data Found</div>;
+async function getPosts(id){
+  const post = await getPostById(id)
+  if (!post.id) {
+    notFound()
   }
+  return post
+}
 
+export default async function Posts({ params }) {
+  const post = await getPosts(params.id);
   return (
     <div>
       <h1>{post.title}</h1>

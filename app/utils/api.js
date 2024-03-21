@@ -11,3 +11,12 @@ export const getPostById = async id => {
   const post = await response.json();
   return post;
 };
+
+export async function getAllPostIds() {
+  const posts = await getAllPosts();
+  return posts.map(post => ({
+    params: {
+      id: post.id.toString() 
+    }
+  }));
+}
