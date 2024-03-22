@@ -4,7 +4,7 @@ Welcome to My Blog Website! This project is a simple blogging platform where use
 
 ## Demo
 
-[Insert gif or link to demo](https://bloggiee.vercel.app/)
+[bloggie.vercel.app](https://bloggiee.vercel.app/)
 
 
 ## Installation
