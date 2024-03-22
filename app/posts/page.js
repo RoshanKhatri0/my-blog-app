@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   return (
-    <div className='my-5 container-fluid'>
+    <div className='home container-fluid'>
       <h1 className='text-center mb-3'>Blog Posts List:</h1>
       <Suspense fallback={<Loading />}>
         <BlogList />

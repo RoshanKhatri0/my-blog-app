@@ -23,11 +23,11 @@ async function getPosts(id){
 export default async function Posts({ params }) {
   const post = await getPosts(params.id);
   return (
-    <div className='container-fluid my-5'>
+    <div className='container-fluid b-details'>
       <h1>{post.title}</h1>
       <p>{post.body}</p>
       <Link href="/">
-        Back to Post Listing
+      <button class="btn-12"><span>View More</span></button>
       </Link>
     </div>
   );
