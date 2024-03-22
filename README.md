@@ -2,6 +2,11 @@
 # My Blog Website - Bloggie
 Welcome to My Blog Website! This project is a simple blogging platform where users can view a list of blog posts and read their details.
 
+## Demo
+
+Insert gif or link to demo
+
+
 ## Installation
 
 To run this project
@@ -40,7 +45,4 @@ Open your browser to view the application.
 - #### CSS Modules: Utilized for styling components, providing scoped styles and better maintainability. 
 - #### API Routes: Implemented for fetching data from the backend, ensuring separation of concerns and better scalability.
 - #### React Hot Toast: Integrated for displaying notifications to the user, enhancing the user experience
-
-
-![Logo](https://static.vecteezy.com/system/resources/previews/017/681/180/original/education-logo-on-letter-b-concept-with-pen-nib-template-free-vector.jpg)
 
